@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>CERTIFICADO</title>
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+<div>
+  <div class="">
+    <div class="row">
+      <div class="col-md-12 ">
+        <img src="img/bannertl-01.png" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+         <form id="formCertificado" method="POST" action="generator.php">
+            <fieldset  id="fielddatos" >
+              <section>
+                <h2 id="titulo">CERTIFICADO TALENT LAND 2019</h2>
+                <p id="parrafo">Ayúdanos a llenar los siguientes campos para finalizar con la entrega de tu certificado.</p>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Nombre Completo</span>
+                  </div>
+                  <input type="text" class="form-control" id="nombre" name="nombre" aria-label="Default" aria-describedby="inputGroup-sizing-default " placeholder="(solo letras)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Email</span>
+                  </div>
+                  <input type="text" class="form-control" id="email" name="email" aria-label="Default" aria-describedby="inputGroup-sizing-default " placeholder="mail@mail.com" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Código de Evenbrite</span>
+                  </div>
+                  <input type="text" class="form-control" id="cod_event" name="cod_event" aria-label="Default" aria-describedby="inputGroup-sizing-default " placeholder="Numero Evenbrite ex: 9988776655" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="resultado"></span>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-1">
+                      <form method="post" >
+                        <input type="button"  id="enviar"  name="enviar" class="enviar btn btn-secondary" value="Enviar" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div id="resultado"></div><br>
+              </section>
+            </fieldset>
+        </form>
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      </div>
+    </div>
+  </div> 
+</div>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $( "#resultado" ).hide();
+    $("#enviar").click(function(e) {
+        e.preventDefault();
+
+        $("#email").val();
+        $("#cod_event").val();
+        var url = "validity.php"; // the script where you handle the form input.
+        $.ajax({
+               type: "POST",
+               url: url,
+               data: $('form').serialize(), // serializes the form's elements.
+               beforeSend: function () {
+                    $( "#resultado" ).show();
+                          $("#resultado").html("Procesando, espere por favor...");
+               },
+               success: function(data)
+               {
+                   $("#resultado").hide();
+                   //alert(data); // show response from the php script
+                   if (data == "0") {
+                    //Si lo encontraron, Nombre ya deberá estar guardado.
+                    //window.location.replace("http://www.talent-network.org");
+                    var name = $("#nombre").val();
+                    document.getElementById("formCertificado").submit();
+                   }
+                   else if (data == "1") {
+                    //No se encontró
+                    alert("Por favor verifica que los datos ingresados sean correctos");
+                   }
+               },
+               error: function(xhr,texto){
+                  $("#resultado").show();
+                  $("#resultado").html("Ocurrio un error de servidor: "+texto);
+               }
+             });
+
+        //e.preventDefault(); // avoid to execute the actual submit of the form.
+    });
+  });
+</script>
+</body>
+</html>

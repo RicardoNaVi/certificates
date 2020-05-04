@@ -49,7 +49,7 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
-	$sql = "INSERT INTO women(name,last_name,email,age,ocupation,school,work,link_face_profile,interest,state,especific_topic) 
+	$sql = "INSERT IGNORE INTO women(name,last_name,email,age,ocupation,school,work,link_face_profile,interest,state,especific_topic) 
 	VALUES('$name','$last_name','$email','$age','$ocupation','$school','$work','$link_face_profile','$interest','$state','$especific_topic')";
 	
 

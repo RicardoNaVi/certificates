@@ -50,7 +50,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 	$sql = "INSERT INTO women(name,last_name,email,age,ocupation,school,work,link_face_profile,interest,state,especific_topic) 
-	VALUES('$name','$last_name','$email','$age','$ocupation','$state','$school','$work','$link_face_profile','$interest','$especific_topic')";
+	VALUES('$name','$last_name','$email','$age','$ocupation','$school','$work','$link_face_profile','$interest','$state','$especific_topic')";
 	
 
 	global $cadena;

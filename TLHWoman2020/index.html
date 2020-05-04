@@ -11,7 +11,7 @@
 <body>
   <div>
     
-    <div class="container" style="margin-top: 40%;">
+    <div class="container" style="margin-top: 2%;">
       <div class="row">
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
         </div>
@@ -47,10 +47,10 @@
                   </div>
                   <select id="interest" class="custom-select" name="interest">
                     <option value="no" selected>Seleccione uno...</option>
-                    <option value=1>Emprendimiento y Negocios</option>
-                    <option value=2>Ciencia y tecnología</option>
-                    <option value=3>Creatividad</option>
-                    <option value=4>Bienestar y desarrollo personal</option>
+                    <option value="Emprendimiento y Negocios">Emprendimiento y Negocios</option>
+                    <option value="Ciencia y tecnología">Ciencia y tecnología</option>
+                    <option value="Creatividad">Creatividad</option>
+                    <option value="Bienestar y desarrollo personal">Bienestar y desarrollo personal</option>
                   </select>
                 </div>
                 <div class="input-group mb-3">
@@ -107,17 +107,17 @@
                   </div>
                   <select id="ocupation" class="custom-select" name="ocupation">
                     <option value="no" selected>Seleccione uno...</option>
-                    <option value=1>Emplead@</option>
-                    <option value=2>Estudiante</option>
-                    <option value=3>Emprendedor@</option>
-                    <option value=4>Empresari@</option>
-                    <option value=5>Ciencias sociales y humanidades</option>
-                    <option value=6>Ciencias exactas e ingenierías</option>
-                    <option value=7>Ciencias económico administrativas</option>
-                    <option value=8>Diseño y/o artes</option>
-                    <option value=9>Salud</option>
-                    <option value=10>Ciencias Agropecuarias</option>
-                    <option value=11>Otro</option>
+                    <option value="Emplead@">Emplead@</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Emprendedor@">Emprendedor@</option>
+                    <option value="Empresari@">Empresari@</option>
+                    <option value="Ciencias sociales y humanidades">Ciencias sociales y humanidades</option>
+                    <option value="Ciencias exactas e ingenierías">Ciencias exactas e ingenierías</option>
+                    <option value="Ciencias económico administrativas">Ciencias económico administrativas</option>
+                    <option value="Diseño y/o artes">Diseño y/o artes</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Ciencias Agropecuarias">Ciencias Agropecuarias</option>
+                    <option value="Otro">Otro</option>
 
                   </select>
                 </div>
@@ -189,9 +189,6 @@
         var email = new RegExp("/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/");
         var flag = [];
 
-        if($("#edad").val() === '0'||$("#edad").val() === ''){
-          flag.push("Edad")
-        }
         if(!patt.test($("#nombre").val())||$("#nombre").val() === ''){
           flag.push("Nombre")
         }
@@ -201,20 +198,23 @@
         if(email.test($("#email").val())){
           flag.push("Email")
         }
+        if($("#interest").val() === 'no'){
+          flag.push("Interés")
+        }
+        if($("#edad").val() === '0'||$("#edad").val() === ''){
+          flag.push("Edad")
+        }
+        if($("#estado").val() === 'no'){
+          flag.push("Estado de Origen")
+        }
+        if($("#ocupation").val() === 'no'){
+          flag.push("Ocupación")
+        }
         if(!patt.test($("#universidad").val())&&$("#universidad").val()!==""){
           flag.push("Universidad")
         }
         if(!patt.test($("#empresa").val())&&$("#universidad").val()!==""){
           flag.push("Empresa")
-        }
-        if($("#ocupation").val() === 'no'){
-          flag.push("Ocupación")
-        }
-        if($("#interest").val() === 'no'){
-          flag.push("Interés")
-        }
-        if($("#estado").val() === 'no'){
-          flag.push("Estado de Origen")
         }
 
         if(flag.length===0){

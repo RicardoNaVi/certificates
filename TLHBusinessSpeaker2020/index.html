@@ -10,7 +10,7 @@
 
 <body>
   <div>
-    
+
     <div class="container" style="margin-top: 2%;">
       <div class="row">
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -74,25 +74,51 @@
         var email = new RegExp("/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/");
         var flag = [];
 
-        if(!patt.test($("#nombre").val())||$("#nombre").val() === ''){
+        if (!patt.test($("#nombre").val()) || $("#nombre").val() === '') {
           flag.push("Nombre")
         }
-        if(email.test($("#email").val())){
+        if (email.test($("#email").val())) {
           flag.push("Email")
         }
-        if(flag.length===0){
+        if (flag.length === 0) {
           alert("Gracias por participar.\nTu certificado ya se encuentra en tu carpeta de Descargas.")
-          document.getElementById("formCertificado").submit();
-        }else{
+          $.ajax({
+            type: "POST",
+            url: "validity.php",
+            data: $('form').serialize(), // serializes the form's elements.
+            beforeSend: function () {
+              $("#resultado").show();
+              $("#resultado").html("Procesando, espere por favor...");
+            },
+            success: function (data) {
+              $("#resultado").hide();
+              //alert(data); // show response from the php script
+              if (data == "0") {
+                //Si lo encontraron, Nombre ya deberá estar guardado.
+                //window.location.replace("http://www.talent-network.org");
+                var name = $("#nombre").val();
+                document.getElementById("formCertificado").submit();
+              }
+              else if (data == "1") {
+                //No se encontró
+                alert("Por favor verifica que los datos ingresados sean correctos");
+              }
+            },
+            error: function (xhr, texto) {
+              $("#resultado").show();
+              $("#resultado").html("Ocurrio un error de servidor: " + texto);
+            }
+          });
+        } else {
           let str = "Revisa que los siguientes campos se encuentren completos y que no tengan caracteres especiales.\n";
-          flag.forEach(element=>{
-            str += "-"+element+"\n";
+          flag.forEach(element => {
+            str += "-" + element + "\n";
           })
           alert(str)
         }
       });
     });
-    
+
   </script>
 </body>
 

@@ -22,6 +22,7 @@
 	}
 	$sql = "SELECT Email,UPPER(Nombre_Ponente) as nameP,Panel,downloads FROM BusinessSpeaker WHERE email='$email' AND UPPER(Nombre_Ponente) LIKE '%$name%'";
 	$resultado = $conn->query($sql);
+	$code = "0";
 	if ($resultado -> num_rows > 0) {
 		try {
 			$row = $resultado -> fetch_assoc();
@@ -43,11 +44,13 @@
 			$center = (imagesx($im) / 2) - ($fontwidth * (strlen($row["nameP"])/2))*14;
 			imagettftext($im, 80, 0, $center, 1340, $color, $fuente, $row["nameP"]);
 			imagepng($im);
+			$code = "0";
 		} catch (Exception $e) {
 			//throw $th;
 			die($e);
 		}	
 	}else{
+		$code = "1";
 	}
-
+	echo $code;
 ?>

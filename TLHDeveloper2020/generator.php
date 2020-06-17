@@ -23,13 +23,15 @@
 	$link_face_profile = $_POST['facelink'];
 	$interest = $_POST['interest'];
 	$especific_topic = $_POST['topics'];
+	$FirstDayConf = $_POST['FirstDayConf'];
+	$SecDayConf = $_POST['SecDayConf'];
 	$cadena = "".$name." ".$last_name;
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	if ($conn->connect_error) return die("Connection failed: " . $conn->connect_error) ;
 	
-	$sql = "INSERT IGNORE INTO $Table (name,last_name,email,age,ocupation,school,work,link_face_profile,interest,state,especific_topic) 
-	VALUES('$name','$last_name','$email','$age','$ocupation','$school','$work','$link_face_profile','$interest','$state','$especific_topic')";
+	$sql = "INSERT IGNORE INTO $Table (name,last_name,email,age,ocupation,school,work,link_face_profile,interest,state,especific_topic,first_day_conf,sec_day_conf) 
+	VALUES('$name','$last_name','$email','$age','$ocupation','$school','$work','$link_face_profile','$interest','$state','$especific_topic','$FirstDayConf','$SecDayConf')";
 	
 	if ($conn->query($sql) === TRUE) {
 		try {

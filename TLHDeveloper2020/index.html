@@ -54,6 +54,58 @@
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Conferencia o panel favorito del día 1</span>
+                  </div>
+                  <select id="FirstDayConf" class="custom-select" name="FirstDayConf">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Mensaje de Bienvenida">10:00 - Mensaje de Bienvenida</option>
+                    <option value="Cómo ser un mejor programador">10:05 - Cómo ser un mejor programador</option>
+                    <option value="La ciberseguridad en la nueva normalidad">10:30 - La ciberseguridad en la nueva normalidad</option>
+                    <option value="Inteligencia Artificial en tiempos de COVID-19">11:30 - Inteligencia Artificial en tiempos de COVID-19</option>
+                    <option value="Tendencias del Front-End 2020">12:00 - Tendencias del Front-End 2020</option>
+                    <option value="El futuro del trabajo">13:00- El futuro del trabajo</option>
+                    <option value="Journey to Cloud Experience">13:30 - Journey to Cloud Experience</option>
+                    <option value="Cosas que nadie me dijo sobre ser ingeniero de software">14:00 - Cosas que nadie me dijo sobre ser ingeniero de software</option>
+                    <option value="Continuidad del negocio. ¡Operando al 100% en la pandemia!">14:30 - Continuidad del negocio. ¡Operando al 100% en la pandemia!</option>
+                    <option value="Datos, el oro del siglo XXI">15:00 - Datos, el oro del siglo XXI</option>
+                    <option value="Ciberseguridad un camino hacia la educación digital">16:00 - Ciberseguridad un camino hacia la educación digital</option>
+                    <option value="Retos y alcances de la Inteligencia Artificial en nuestro día a día">16:30 - Retos y alcances de la Inteligencia Artificial en nuestro día a día</option>
+                    <option value="¿Por qué la nube ante esta situación retadora?">17:30 - ¿Por qué la nube ante esta situación retadora?</option>
+                    <option value="Desarrollo seguro y las nuevas amenazas por afrontar">18:00 - Desarrollo seguro y las nuevas amenazas por afrontar</option>
+                    <option value="EL RETO 4.0">19:00 - EL RETO 4.0</option>
+                    <option value="Desarrollo tecnológico de alto impacto">19:30 - Desarrollo tecnológico de alto impacto</option>
+                    <option value="Ciberataques en tiempos de COVID-19">20:00 - Ciberataques en tiempos de COVID-19</option>
+                    <option value="Development and innovation">20:30 - Development and innovation</option>
+                    <option value="El mundo mágico de las tecnologías Libres">21:30 - El mundo mágico de las tecnologías Libres</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Conferencia o panel favorito del día 2</span>
+                  </div>
+                  <select id="SecDayConf" class="custom-select" name="SecDayConf">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Kellogg Digital Transformation">10:00 - Kellogg Digital Transformation</option>
+                    <option value="Epic Fails de la Inteligencia Artificial en la práctica">11:00 - Epic Fails de la Inteligencia Artificial en la práctica</option>
+                    <option value="Oportunidades de trabajo como desarrollador">11:30 - Oportunidades de trabajo como desarrollador</option>
+                    <option value="Big Data en AWS">12:30 - Big Data en AWS</option>
+                    <option value="Ciber-Resilencia">13:00 - Ciber-Resilencia</option>
+                    <option value="Las nuevas tecnologías de la industria 4.0">14:00 - Las nuevas tecnologías de la industria 4.0</option>
+                    <option value="Open source: ¿qué es y por dónde empiezo?">14:30 - Open source: ¿qué es y por dónde empiezo?</option>
+                    <option value="Hacking & Intelligence For National Security">15:30 - Hacking & Intelligence For National Security</option>
+                    <option value="GameEngines y la Gamificación de UI/UX en la Industria Automotriz">16:00 - GameEngines y la Gamificación de UI/UX en la Industria Automotriz</option>
+                    <option value="Robots que aprenden a aprender">17:00 - Robots que aprenden a aprender</option>
+                    <option value="Aplicando modelos de Inteligencia Artificial en robots humanoides">17:30 - Aplicando modelos de Inteligencia Artificial en robots humanoides</option>
+                    <option value="Adopting the Remote Work, based on the Motivation and Focus">18:00 - Adopting the Remote Work, based on the Motivation and Focus</option>
+                    <option value="Fem Tech">18:30 - Fem Tech</option>
+                    <option value="MensLa tecnología en kubo.financieroaje">19:30 - La tecnología en kubo.financiero</option>
+                    <option value="Tech for Good: developing tech solutions for global challenges">20:00 - Tech for Good: developing tech solutions for global challenges</option>
+                    <option value="Creatividad e Inteligencia Artificial con Adobe Sensei: Tu asistente, Profesor y Musa">21:00 - Creatividad e Inteligencia Artificial con Adobe Sensei: Tu asistente, Profesor y Musa</option>
+                    <option value="Inteligencia Artificial Ética – ¿Que es? y Un caso de uso">21:30 - Inteligencia Artificial Ética – ¿Que es? y Un caso de uso</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
                     <span class="input-group-text" id="">Edad en años</span>
                   </div>
                   <input type="number" min="0" max="150" class="form-control" id="edad" name="edad" aria-label="Default"
@@ -205,6 +257,12 @@
         }
         if($("#estado").val() === 'no'){
           flag.push("Estado de Origen")
+        }
+        if($("#FirstDayConf").val() === 'no'){
+          flag.push("Conferencia Favorita día 1")
+        }
+        if($("#SecDayConf").val() === 'no'){
+          flag.push("Conferencia Favorita día 2")
         }
         if($("#ocupation").val() === 'no'){
           flag.push("Ocupación")

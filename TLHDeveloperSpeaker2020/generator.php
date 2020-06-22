@@ -23,7 +23,7 @@
 	if ($resultado -> num_rows > 0) {
 		try {
 			$row = $resultado -> fetch_assoc();
-			$sql = "UPDATE BusinessSpeaker SET downloads=downloads+1 WHERE email='$email' AND UPPER(Nombre_Ponente) LIKE '%$name%'";
+			$sql = "UPDATE $Table SET downloads=downloads+1 WHERE email='$email' AND UPPER(Nombre_Ponente) LIKE '%$name%'";
 			$conn -> query($sql);
 			header('Content-Type: image/png');
 			header ( "Content-Type: application/force-download" );

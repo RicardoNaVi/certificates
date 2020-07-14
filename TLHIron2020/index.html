@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CERTIFICADO</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+
+<body>
+  <div>
+    
+    <div class="container" style="margin-top: 2%;">
+      <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+          <form id="formCertificado" method="POST" action="generator.php">
+            <fieldset id="fielddatos">
+              <section>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Nombre(s)</span>
+                  </div>
+                  <input type="text" class="form-control" id="nombre" name="nombre" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo letras)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Apellidos</span>
+                  </div>
+                  <input type="text" class="form-control" id="apellido" name="apellido" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo letras)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Email</span>
+                  </div>
+                  <input type="email" class="form-control" id="email" name="email" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="mail@mail.com" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Tema de interés</span>
+                  </div>
+                  <select id="interest" class="custom-select" name="interest">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Makers, Robots y Drones">Makers, Robots y Drones</option>
+                    <option value="Internet of Things">Internet of Things</option>
+                    <option value="Energía e Industria 4.0">Energía e Industria 4.0</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Conferencia o panel favorito del día 1</span>
+                  </div>
+                  <select id="FirstDayConf" class="custom-select" name="FirstDayConf">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Mensaje de Bienvenida">10:00 - Mensaje de Bienvenida</option>
+                    <option value="Tecnologia Bionica Disruptiva">10:05 - Tecnologia Bionica Disruptiva</option>
+                    <option value="Innovación y Emprendimientos con Drones">10:30 - Innovación y Emprendimientos con Drones</option>
+                    <option value="Movimiento Maker ¿Qué haremos en el futuro?">11:30 - Movimiento Maker ¿Qué haremos en el futuro?</option>
+                    <option value="Panorama energético en México">12:00 - Panorama energético en México</option>
+                    <option value="El futuro de la robótica y tendencias de la industria 4.0">13:00- El futuro de la robótica y tendencias de la industria 4.0</option>
+                    <option value="Impresión 3D y salud">13:30 - Impresión 3D y salud</option>
+                    <option value="Makerspace is not the space">14:30 - Makerspace is not the space</option>
+                    <option value="Sobreviviendo a Marte: Entrenamiento para situaciones extremas">15:00 - Sobreviviendo a Marte: Entrenamiento para situaciones extremas</option>
+                    <option value="Educación e industria 4.0">16:00 - Educación e industria 4.0</option>
+                    <option value="¿Qué pasará con la robótica educativa?">16:30 - ¿Qué pasará con la robótica educativa?</option>
+                    <option value="NoMADA® Telemetrics">17:30 - NoMADA® Telemetrics</option>
+                    <option value="Visión para una nueva movilidad">18:00 - Visión para una nueva movilidad</option>
+                    <option value="MakersGDL y la feria maker más grande de Latinoamérica">19:00 - MakersGDL y la feria maker más grande de Latinoamérica</option>
+                    <option value="Haz lo que te apasiona">19:30 - Haz lo que te apasiona</option>
+                    <option value="Transformando lo cotidiano: Startups en Iron Land">20:30 - Transformando lo cotidiano: Startups en Iron Land</option>
+                    <option value="Fabricación de Robots Mexicanos, ‘La Explosión Make’">21:30 - Fabricación de Robots Mexicanos, ‘La Explosión Make’</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Conferencia o panel favorito del día 2</span>
+                  </div>
+                  <select id="SecDayConf" class="custom-select" name="SecDayConf">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Kellogg Digital Transformation">10:00 - ¿Porque aún no estamos preparados para tener robots en casa?</option>
+                    <option value="Diseño 3D paramétrico con FreeCAD">11:00 - Diseño 3D paramétrico con FreeCAD</option>
+                    <option value="Buenas prácticas para generar hardware">11:30 - Buenas prácticas para generar hardware</option>
+                    <option value="Internet Of Things, su integración para el éxito industrial y académico">12:30 - Internet Of Things, su integración para el éxito industrial y académico</option>
+                    <option value="Makers en el Mundo Casos de éxito y el futuro">13:00 - Makers en el Mundo Casos de éxito y el futuro</option>
+                    <option value="Revolucionando la cadena de suministro">14:00 - Revolucionando la cadena de suministro</option>
+                    <option value="Carrera espacial antes y después del blip">14:30 - Carrera espacial antes y después del blip</option>
+                    <option value="Impresion 3D: Hoy y el futuro">15:30 - Impresion 3D: Hoy y el futuro</option>
+                    <option value="The King Of Hardware">16:00 - The King Of Hardware</option>
+                    <option value="La funcionalidad y complejidad de un satélite enlatada; su mecánica y electrónica">17:00 - La funcionalidad y complejidad de un satélite enlatada; su mecánica y electrónica</option>
+                    <option value="Innovación inmersa en los torneos de tecnología">17:30 - Innovación inmersa en los torneos de tecnología</option>
+                    <option value="Technology Vision 2020">18:30 - Technology Vision 2020</option>
+                    <option value="Los retos de la ingeniería ante la industria 4.0">19:00 - Los retos de la ingeniería ante la industria 4.0</option>
+                    <option value="Conferencia">20:00 - Conferencia</option>
+                    <option value="Hebocon para todos">20:30 - Hebocon para todos</option>
+                    <option value="MakerSpace como medio de Reinserción Social">21:30 - MakerSpace como medio de Reinserción Social</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Edad en años</span>
+                  </div>
+                  <input type="number" min="0" max="150" class="form-control" id="edad" name="edad" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo número)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Estado de procedencia</span>
+                  </div>
+                  <select id="estado" class="custom-select" name="estado">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="AGS">Aguascalientes</option>
+                    <option value="BC">Baja California</option>
+                    <option value="BCS">Baja California Sur</option>
+                    <option value="CMP">Campeche</option>
+                    <option value="CHS">Chiapas</option>
+                    <option value="CHI">Chihuahua</option>
+                    <option value="COA">Coahuila</option>
+                    <option value="COL">Colima</option>
+                    <option value="CDMX">Ciudad de México</option>
+                    <option value="DGO">Durango</option>
+                    <option value="MEX">Estado de México</option>
+                    <option value="GTO">Guanajuato</option>
+                    <option value="GRO">Guerrero</option>
+                    <option value="HGO">Hidalgo</option>
+                    <option value="JAL">Jalisco</option>
+                    <option value="MCH">Michoacán</option>
+                    <option value="MOR">Morelos</option>
+                    <option value="NAY">Nayarit</option>
+                    <option value="NL">Nuevo León</option>
+                    <option value="OAX">Oaxaca</option>
+                    <option value="PUE">Puebla</option>
+                    <option value="QRO">Querétaro</option>
+                    <option value="QR">Quintana Roo</option>
+                    <option value="SLP">San Luis Potosí</option>
+                    <option value="SIN">Sinaloa</option>
+                    <option value="SON">Sonora</option>
+                    <option value="TAB">Tabasco</option>
+                    <option value="TMS">Tamaulipas</option>
+                    <option value="TLX">Tlaxcala</option>
+                    <option value="VER">Veracruz</option>
+                    <option value="YUC">Yucatán</option>
+                    <option value="ZAC">Zacatecas</option>
+                    <option value="OTHER">Extranjero</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Ocupación</span>
+                  </div>
+                  <select id="ocupation" class="custom-select" name="ocupation">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Emplead@">Emplead@</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Emprendedor@">Emprendedor@</option>
+                    <option value="Empresari@">Empresari@</option>
+                    <option value="Ciencias sociales y humanidades">Ciencias sociales y humanidades</option>
+                    <option value="Ciencias exactas e ingenierías">Ciencias exactas e ingenierías</option>
+                    <option value="Ciencias económico administrativas">Ciencias económico administrativas</option>
+                    <option value="Diseño y/o artes">Diseño y/o artes</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Ciencias Agropecuarias">Ciencias Agropecuarias</option>
+                    <option value="Otro">Otro</option>
+
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Universidad</span>
+                  </div>
+                  <input type="text" class="form-control" id="universidad" name="universidad" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="Universidad o escuela">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Empresa</span>
+                  </div>
+                  <input type="text" class="form-control" id="empresa" name="empresa" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="Empresa en la que laboras">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Facebook o Linkedin</span>
+                  </div>
+                  <input type="text" class="form-control" id="facelink" name="facelink" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="Contacto">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Descríbenos tus intereses</span>
+                  </div>
+                  <textarea type="text" class="form-control" id="topics" name="topics" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="" ></textarea>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="resultado"></span>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-1">
+                      <form method="post">
+                        <input type="button" id="enviar" name="enviar" class="enviar btn btn-secondary"
+                          value="Enviar" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div id="resultado"></div><br>
+              </section>
+            </fieldset>
+          </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#resultado").hide();
+      $("#enviar").click(function (e) {
+        e.preventDefault();
+        var patt = new RegExp("[ A-Za-zñÑäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ]");
+        var email = new RegExp("/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/");
+        var flag = [];
+
+        if(!patt.test($("#nombre").val())||$("#nombre").val() === ''){
+          flag.push("Nombre")
+        }
+        if(!patt.test($("#apellido").val())||$("#apellido").val() === ''){
+          flag.push("Apellido")
+        }
+        if(email.test($("#email").val())){
+          flag.push("Email")
+        }
+        if($("#interest").val() === 'no'){
+          flag.push("Interés")
+        }
+        if($("#edad").val() === '0'||$("#edad").val() === ''){
+          flag.push("Edad")
+        }
+        if($("#estado").val() === 'no'){
+          flag.push("Estado de Origen")
+        }
+        if($("#FirstDayConf").val() === 'no'){
+          flag.push("Conferencia Favorita día 1")
+        }
+        if($("#SecDayConf").val() === 'no'){
+          flag.push("Conferencia Favorita día 2")
+        }
+        if($("#ocupation").val() === 'no'){
+          flag.push("Ocupación")
+        }
+        if(!patt.test($("#universidad").val())&&$("#universidad").val()!==""){
+          flag.push("Universidad")
+        }
+        if(!patt.test($("#empresa").val())&&$("#universidad").val()!==""){
+          flag.push("Empresa")
+        }
+
+        if(flag.length===0){
+          alert("Gracias por participar.\nTu certificado ya se encuentra en tu carpeta de Descargas.")
+          document.getElementById("formCertificado").submit();
+        }else{
+          let str = "Revisa que los siguientes campos se encuentren completos y que no tengan caracteres especiales.\n";
+          flag.forEach(element=>{
+            str += "-"+element+"\n";
+          })
+          alert(str)
+        }
+      });
+    });
+    
+  </script>
+</body>
+
+</html>

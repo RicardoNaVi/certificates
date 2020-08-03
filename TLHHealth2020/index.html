@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CERTIFICADO</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+
+<body>
+  <div>
+    
+    <div class="container" style="margin-top: 2%;">
+      <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+          <form id="formCertificado" method="POST" action="generator.php">
+            <fieldset id="fielddatos">
+              <section>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Nombre(s)</span>
+                  </div>
+                  <input type="text" class="form-control" id="nombre" name="nombre" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo letras)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Apellidos</span>
+                  </div>
+                  <input type="text" class="form-control" id="apellido" name="apellido" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo letras)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Email</span>
+                  </div>
+                  <input type="email" class="form-control" id="email" name="email" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="mail@mail.com" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Tema de interés</span>
+                  </div>
+                  <select id="interest" class="custom-select" name="interest">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Bitcoin & Ethereum">Bitcoin & Ethereum</option>
+                    <option value="Criptomonedas y DEFI">Criptomonedas y DEFI</option>
+                    <option value="Desarrollo de Blockchain">Desarrollo de Blockchain</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Conferencia o panel favorito del día 1</span>
+                  </div>
+                  <select id="FirstDayConf" class="custom-select" name="FirstDayConf">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Mensaje de Bienvenida">10:00 - Mensaje de Bienvenida</option>
+                    <option value="Fraudes, estafas y proyectos de pacotilla">10:05 - Fraudes, estafas y proyectos de pacotilla</option>
+                    <option value="Videojuegos y Blockchain">10:30 - Videojuegos y Blockchain</option>
+                    <option value="El Mensaje de Mejor Dinero">11:00 - El Mensaje de Mejor Dinero</option>
+                    <option value="Fintech & BlockChain, la tecnología de la nueva normalidad">11:30 - Fintech & BlockChain, la tecnología de la nueva normalidad</option>
+                    <option value="¿Cómo se toman decisiones en proyectos Blockchain?">12:00- ¿Cómo se toman decisiones en proyectos Blockchain?</option>
+                    <option value="¿Cómo puedo incursionar en el ecosistema Blockchain?">13:00 - ¿Cómo puedo incursionar en el ecosistema Blockchain?</option>
+                    <option value="Operando Activos Digitales: Implicaciones Prácticas y Fundamentales">13:30 - Operando Activos Digitales: Implicaciones Prácticas y Fundamentales</option>
+                    <option value="The GrainChain Ecosystem">14:00 - The GrainChain Ecosystem</option>
+                    <option value="¿Cómo crear una comunidad cripto de 1millón de usuarios?">14:30 - ¿Cómo crear una comunidad cripto de 1millón de usuarios?</option>
+                    <option value="Blockchain y criptoseguridad a la Mexicana">15:00 - Blockchain y criptoseguridad a la Mexicana</option>
+                    <option value="Decentraland: participando del mundo virtual sobre la blockchain">16:00 - Decentraland: participando del mundo virtual sobre la blockchain</option>
+                    <option value="Platicando con Startups de Blockchain">16:30 - Platicando con Startups de Blockchain</option>
+                    <option value="Cómo puede el Blockchain revolucionar los mercados financieros">17:30 - Cómo puede el Blockchain revolucionar los mercados financieros</option>
+                    <option value="Comunidades con códigos: el rol de las DAOs en la blockchain">18:00 - Comunidades con códigos: el rol de las DAOs en la blockchain</option>
+                    <option value="¿Cómo la tecnología Blockchain puede impulsar la economía en Latinoamérica?">19:00 - ¿Cómo la tecnología Blockchain puede impulsar la economía en Latinoamérica?</option>
+                    <option value="Coffechain">19:30 - Coffechain</option>
+                    <option value="Cómo operar los mercados con Análisis Técnico">20:00 - Cómo operar los mercados con Análisis Técnico</option>
+                    <option value="Monetizando Redes Sociales">21:00 - Monetizando Redes Sociales</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Conferencia o panel favorito del día 2</span>
+                  </div>
+                  <select id="SecDayConf" class="custom-select" name="SecDayConf">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Adopción de criptomonedas e inclusión financiera en la época de Susana Distancia">10:00 - Adopción de criptomonedas e inclusión financiera en la época de Susana Distancia</option>
+                    <option value="Criptomonedas: Beneficios y riesgos">11:00 - Criptomonedas: Beneficios y riesgos</option>
+                    <option value="Bitcoin Versus Mobile Money (The need for Synergy)">11:30 - Bitcoin Versus Mobile Money (The need for Synergy)</option>
+                    <option value="El valor de Blockchain en las empresas">12:30 - El valor de Blockchain en las empresas</option>
+                    <option value="Educación, Difusión y Diversión con Blockchain">13:00 - Educación, Difusión y Diversión con Blockchain</option>
+                    <option value="Las criptomonedas son productos digitales, ¿quién las mantiene?">14:00 - Las criptomonedas son productos digitales, ¿quién las mantiene?</option>
+                    <option value="Arte Imparable en la Blockchain">14:30 - Arte Imparable en la Blockchain</option>
+                    <option value="Blockchain en la 4ta revolución industrial">15:30 - Blockchain en la 4ta revolución industrial</option>
+                    <option value="¿Qué es DeFi (finanzas descentralizadas) y cómo está cambiando el mundo?">16:00 - ¿Qué es DeFi (finanzas descentralizadas) y cómo está cambiando el mundo?</option>
+                    <option value="Fintech como modelo de inversión">17:00 - Fintech como modelo de inversión</option>
+                    <option value="El derecho de Bitcoin">17:30 - El derecho de Bitcoin</option>
+                    <option value="Pagos en cripto y su adopción">18:30 - Pagos en cripto y su adopción</option>
+                    <option value="Premiación Retos">18:55 - Premiación Retos</option>
+                    <option value="Inversiones en Fintech y Blockchain ¿Alto Riesgo?">19:00 - Inversiones en Fintech y Blockchain ¿Alto Riesgo?</option>
+                    <option value="Mitos y verdades de Blockchain en Latinoamérica">20:00 - Mitos y verdades de Blockchain en Latinoamérica</option>
+                    <option value="Open Banking & DeFi">20:30 - Open Banking & DeFi</option>
+                    <option value="DeFi, acciones, oro y derivados en Blockchain">20:30 - DeFi, acciones, oro y derivados en Blockchain</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Edad en años</span>
+                  </div>
+                  <input type="number" min="0" max="150" class="form-control" id="edad" name="edad" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo número)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Estado de procedencia</span>
+                  </div>
+                  <select id="estado" class="custom-select" name="estado">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="AGS">Aguascalientes</option>
+                    <option value="BC">Baja California</option>
+                    <option value="BCS">Baja California Sur</option>
+                    <option value="CMP">Campeche</option>
+                    <option value="CHS">Chiapas</option>
+                    <option value="CHI">Chihuahua</option>
+                    <option value="COA">Coahuila</option>
+                    <option value="COL">Colima</option>
+                    <option value="CDMX">Ciudad de México</option>
+                    <option value="DGO">Durango</option>
+                    <option value="MEX">Estado de México</option>
+                    <option value="GTO">Guanajuato</option>
+                    <option value="GRO">Guerrero</option>
+                    <option value="HGO">Hidalgo</option>
+                    <option value="JAL">Jalisco</option>
+                    <option value="MCH">Michoacán</option>
+                    <option value="MOR">Morelos</option>
+                    <option value="NAY">Nayarit</option>
+                    <option value="NL">Nuevo León</option>
+                    <option value="OAX">Oaxaca</option>
+                    <option value="PUE">Puebla</option>
+                    <option value="QRO">Querétaro</option>
+                    <option value="QR">Quintana Roo</option>
+                    <option value="SLP">San Luis Potosí</option>
+                    <option value="SIN">Sinaloa</option>
+                    <option value="SON">Sonora</option>
+                    <option value="TAB">Tabasco</option>
+                    <option value="TMS">Tamaulipas</option>
+                    <option value="TLX">Tlaxcala</option>
+                    <option value="VER">Veracruz</option>
+                    <option value="YUC">Yucatán</option>
+                    <option value="ZAC">Zacatecas</option>
+                    <option value="OTHER">Extranjero</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Ocupación</span>
+                  </div>
+                  <select id="ocupation" class="custom-select" name="ocupation">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Emplead@">Emplead@</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Emprendedor@">Emprendedor@</option>
+                    <option value="Empresari@">Empresari@</option>
+                    <option value="Ciencias sociales y humanidades">Ciencias sociales y humanidades</option>
+                    <option value="Ciencias exactas e ingenierías">Ciencias exactas e ingenierías</option>
+                    <option value="Ciencias económico administrativas">Ciencias económico administrativas</option>
+                    <option value="Diseño y/o artes">Diseño y/o artes</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Ciencias Agropecuarias">Ciencias Agropecuarias</option>
+                    <option value="Otro">Otro</option>
+
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Universidad</span>
+                  </div>
+                  <input type="text" class="form-control" id="universidad" name="universidad" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="Universidad o escuela">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Empresa</span>
+                  </div>
+                  <input type="text" class="form-control" id="empresa" name="empresa" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="Empresa en la que laboras">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Facebook o Linkedin</span>
+                  </div>
+                  <input type="text" class="form-control" id="facelink" name="facelink" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="Contacto">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Descríbenos tus intereses</span>
+                  </div>
+                  <textarea type="text" class="form-control" id="topics" name="topics" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="" ></textarea>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="resultado"></span>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-1">
+                      <form method="post">
+                        <input type="button" id="enviar" name="enviar" class="enviar btn btn-secondary"
+                          value="Enviar" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div id="resultado"></div><br>
+              </section>
+            </fieldset>
+          </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#resultado").hide();
+      $("#enviar").click(function (e) {
+        e.preventDefault();
+        var patt = new RegExp("[ A-Za-zñÑäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ]");
+        var email = new RegExp("/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/");
+        var flag = [];
+
+        if(!patt.test($("#nombre").val())||$("#nombre").val() === ''){
+          flag.push("Nombre")
+        }
+        if(!patt.test($("#apellido").val())||$("#apellido").val() === ''){
+          flag.push("Apellido")
+        }
+        if(email.test($("#email").val())){
+          flag.push("Email")
+        }
+        if($("#interest").val() === 'no'){
+          flag.push("Interés")
+        }
+        if($("#edad").val() === '0'||$("#edad").val() === ''){
+          flag.push("Edad")
+        }
+        if($("#estado").val() === 'no'){
+          flag.push("Estado de Origen")
+        }
+        if($("#FirstDayConf").val() === 'no'){
+          flag.push("Conferencia Favorita día 1")
+        }
+        if($("#SecDayConf").val() === 'no'){
+          flag.push("Conferencia Favorita día 2")
+        }
+        if($("#ocupation").val() === 'no'){
+          flag.push("Ocupación")
+        }
+        if(!patt.test($("#universidad").val())&&$("#universidad").val()!==""){
+          flag.push("Universidad")
+        }
+        if(!patt.test($("#empresa").val())&&$("#universidad").val()!==""){
+          flag.push("Empresa")
+        }
+
+        if(flag.length===0){
+          alert("Gracias por participar.\nTu certificado ya se encuentra en tu carpeta de Descargas.")
+          document.getElementById("formCertificado").submit();
+        }else{
+          let str = "Revisa que los siguientes campos se encuentren completos y que no tengan caracteres especiales.\n";
+          flag.forEach(element=>{
+            str += "-"+element+"\n";
+          })
+          alert(str)
+        }
+      });
+    });
+    
+  </script>
+</body>
+
+</html>

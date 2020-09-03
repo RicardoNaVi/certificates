@@ -108,6 +108,19 @@
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Género</span>
+                  </div>
+                  <select id="genero" class="custom-select" name="genero">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="F">Femenino</option>
+                    <option value="M">Masculino</option>
+                    <option value="noEspe">Prefiero no especificar</option>
+                    <option value="Otro">Otro</option>
+
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
                     <span class="input-group-text" id="">Estado de procedencia</span>
                   </div>
                   <select id="estado" class="custom-select" name="estado">
@@ -249,6 +262,9 @@
         }
         if($("#edad").val() === '0'||$("#edad").val() === ''){
           flag.push("Edad")
+        }
+        if($("#genero").val() === 'no'){
+          flag.push("Género")
         }
         if($("#estado").val() === 'no'){
           flag.push("Estado de Origen")

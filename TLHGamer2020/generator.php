@@ -16,6 +16,7 @@
 	$last_name = mb_strtoupper($_POST['apellido']);
 	$email = mb_strtolower($_POST['email']);
 	$age = $_POST['edad'];
+	$genero = $_POST['genero'];
 	$ocupation = $_POST['ocupation'];
 	$state = $_POST['estado'];
 	$school = mb_strtoupper($_POST['universidad']);
@@ -30,8 +31,8 @@
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	if ($conn->connect_error) return die("Connection failed: " . $conn->connect_error) ;
 	
-	$sql = "INSERT IGNORE INTO $Table (name,last_name,email,age,ocupation,school,work,link_face_profile,interest,state,especific_topic,first_day_conf,sec_day_conf) 
-	VALUES('$name','$last_name','$email','$age','$ocupation','$school','$work','$link_face_profile','$interest','$state','$especific_topic','$FirstDayConf','$SecDayConf')";
+	$sql = "INSERT IGNORE INTO $Table (name,last_name,email,age,gender,ocupation,school,work,link_face_profile,interest,state,especific_topic,first_day_conf,sec_day_conf) 
+	VALUES('$name','$last_name','$email','$age','$genero','$ocupation','$school','$work','$link_face_profile','$interest','$state','$especific_topic','$FirstDayConf','$SecDayConf')";
 	
 	if ($conn->query($sql) === TRUE) {
 		try {

@@ -22,10 +22,17 @@
               <section>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text" id="">No. de pedido</span>
+                    <span class="input-group-text" id="">Nombre completo</span>
                   </div>
-                  <input type="text" class="form-control" id="pedido" name="pedido" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo números)" required>
+                  <input type="text" class="form-control" id="nombre" name="nombre" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo letras)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Email</span>
+                  </div>
+                  <input type="email" class="form-control" id="email" name="email" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="mail@mail.com" required>
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
@@ -63,10 +70,15 @@
       $("#resultado").hide();
       $("#enviar").click(function (e) {
         e.preventDefault();
+        var patt = new RegExp("[ A-Za-zñÑäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ]");
+        var email = new RegExp("/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/");
         var flag = [];
 
-        if ($("#pedido").val() === '') {
-          flag.push("No. Pedido")
+        if (!patt.test($("#nombre").val()) || $("#nombre").val() === '') {
+          flag.push("Nombre")
+        }
+        if (email.test($("#email").val())) {
+          flag.push("Email")
         }
         if (flag.length === 0) {
           $.ajax({

@@ -6,11 +6,11 @@
 		return $res; 
 	} 
 	
-	$Table = "Recrea2020";
+	$Table = "familia";
 	$servername = "localhost";
-	$username = "talentne_2020ah";
-	$password = "RnNxO=T56!{r";
-	$dbname = "talentne_2020certifathome";
+	$username = "recre_familia";
+	$password = "0bv$tr16dG7*SRCfB2C91t";
+	$dbname = "wp_recrea_familia";
 
 	ini_set('max_execution_time', 0);
 	mb_internal_encoding('UTF-8');

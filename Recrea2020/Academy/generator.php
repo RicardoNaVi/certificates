@@ -6,11 +6,11 @@
 		return $res; 
 	} 
 	
-	$Table = "Recrea2020";
+	$Table = "academy";
 	$servername = "localhost";
-	$username = "talentne_2020ah";
-	$password = "RnNxO=T56!{r";
-	$dbname = "talentne_2020certifathome";
+	$username = "recrea_202";
+	$password = "ziIy$06Hz$3C";
+	$dbname = "recrea_202";
 
 	ini_set('max_execution_time', 0);
 	mb_internal_encoding('UTF-8');

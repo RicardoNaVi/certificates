@@ -1,15 +1,15 @@
 <?php
 	function RemoveSpecialChar($str) { 
-		$raro = array("á","Á","é","É","í","Í","ó","Ó","ú","Ú","ñ","Ñ");
-		$normal = array("a","A","e","E","i","I","o","O","u","U","n","N");
+		$raro = array("á","Á","é","É","í","Í","ó","Ó","ú","Ú","ñ","Ñ","?");
+		$normal = array("á","Á","é","É","í","Í","ó","Ó","ú","Ú","ñ","Ñ","?");
 		$res = str_replace($raro, $normal, $str);
 		return $res; 
 	} 
 	
 	$Table = "familia";
 	$servername = "localhost";
-	$username = "recre_familia";
-	$password = "0bv$tr16dG7*SRCfB2C91t";
+	$username = "talentne_2020ah";
+	$password = "RnNxO=T56!{r";
 	$dbname = "wp_recrea_familia";
 
 	$pedido = $_POST['pedido'];
@@ -25,18 +25,17 @@
 			$row = $resultado -> fetch_assoc();
 			$sql = "UPDATE $Table SET Downloads=Downloads+1 WHERE id= '$pedido'";
 			$conn -> query($sql);
-			$nameP = RemoveSpecialChar($row["nameP"]);
 			header('Content-Type: image/png');
 			header ( "Content-Type: application/force-download" );
 			header ( "Content-Type: application/download" );
 			header ( "Content-Type: png" );
 			header ( "Content-Disposition: attachment; filename=certificado.png" );
 			$im     = imagecreatefrompng("img/Certificado.png");
+			$fontwidth = 80;
+			$nameP = RemoveSpecialChar($row["nameP"]);
+			$center = (imagesx($im) / 2) - (($fontwidth-10) * (strlen($nameP)))/2;
 			$color = imagecolorallocate($im, 0, 0, 0);
-			$px     = (imagesx($im) - 7.5 * strlen($row["nameP"])) / 2;
-			$fontwidth = 5;
-			$center = (imagesx($im) / 2) - ($fontwidth * (strlen($row["nameP"])/2))*14;
-			imagettftext($im, 80, 0, $center, 1620, $color, realpath("font/nutmegregular.ttf"),$nameP);
+			imagettftext($im, $fontwidth, 0, $center, 1620, $color, realpath("font/nutmegregular.ttf"),$nameP);
 			imagepng($im);
 			$code = "0";
 		} catch (Exception $e) { die($e); }	

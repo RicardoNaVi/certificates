@@ -1,8 +1,8 @@
 <?php
 	$Table = "familia";
 	$servername = "localhost";
-	$username = "recre_familia";
-	$password = "0bv$tr16dG7*SRCfB2C91t";
+	$username = "talentne_2020ah";
+	$password = "RnNxO=T56!{r";
 	$dbname = "wp_recrea_familia";
 
 	$pedido = $_POST['pedido'];

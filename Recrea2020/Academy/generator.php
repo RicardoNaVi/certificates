@@ -1,7 +1,7 @@
 <?php
 	function RemoveSpecialChar($str) { 
 		$raro = array("á","Á","é","É","í","Í","ó","Ó","ú","Ú","ñ","Ñ","?");
-		$normal = array("a","A","e","E","i","I","o","O","u","U","n","N","");
+		$normal = array("á","Á","é","É","í","Í","ó","Ó","ú","Ú","ñ","Ñ","?");
 		$res = str_replace($raro, $normal, $str);
 		return $res; 
 	} 

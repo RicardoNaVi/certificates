@@ -7,9 +7,9 @@
 	} 
 	
 	$Table = "academy";
-	$servername = "localhost";
-	$username = "recrea_202";
-	$password = "ziIy$06Hz$3C";
+	$servername = "10.9.4.40";
+	$username = "recrea_2020";
+	$password = "OX3g18IRGk@A";
 	$dbname = "recrea_academy_certificados";
 
 	$pedido = $_POST['pedido'];

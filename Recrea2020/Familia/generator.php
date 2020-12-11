@@ -7,10 +7,10 @@
 	} 
 	
 	$Table = "familia";
-	$servername = "localhost";
-	$username = "talentne_2020ah";
-	$password = "RnNxO=T56!{r";
-	$dbname = "wp_recrea_familia";
+	$servername = "10.9.4.40";
+	$username = "recrea_2020";
+	$password = "OX3g18IRGk@A";
+	$dbname = "recrea_familia_certificados";
 
 	$pedido = $_POST['pedido'];
 	
@@ -29,8 +29,8 @@
 			header ( "Content-Type: application/force-download" );
 			header ( "Content-Type: application/download" );
 			header ( "Content-Type: png" );
-			header ( "Content-Disposition: attachment; filename=certificado.png" );
-			$im     = imagecreatefrompng("img/Certificado.png");
+			header ( "Content-Disposition: attachment; filename=Constancia.png" );
+			$im     = imagecreatefrompng("img/Constancia.png");
 			$fontwidth = 80;
 			$nameP = RemoveSpecialChar($row["nameP"]);
 			$center = (imagesx($im) / 2) - (($fontwidth-10) * (strlen($nameP)))/2;

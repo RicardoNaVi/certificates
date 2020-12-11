@@ -1,9 +1,9 @@
 <?php
 	$Table = "familia";
-	$servername = "localhost";
-	$username = "talentne_2020ah";
-	$password = "RnNxO=T56!{r";
-	$dbname = "wp_recrea_familia";
+	$servername = "10.9.4.40";
+	$username = "recrea_2020";
+	$password = "OX3g18IRGk@A";
+	$dbname = "recrea_familia_certificados";
 
 	$pedido = $_POST['pedido'];
 

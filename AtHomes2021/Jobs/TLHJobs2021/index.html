@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CERTIFICADO</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+
+<body>
+  <div>
+    
+    <div class="container" style="margin-top: 2%;">
+      <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+          <form id="formCertificado" method="POST" action="generator.php">
+            <fieldset id="fielddatos">
+              <section>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Nombre(s)</span>
+                  </div>
+                  <input type="text" class="form-control" id="nombre" name="nombre" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo letras)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Apellidos</span>
+                  </div>
+                  <input type="text" class="form-control" id="apellido" name="apellido" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo letras)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Email</span>
+                  </div>
+                  <input type="email" class="form-control" id="email" name="email" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="mail@mail.com" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Género</span>
+                  </div>
+                  <select id="genero" class="custom-select" name="genero">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="F">Femenino</option>
+                    <option value="M">Masculino</option>
+                    <option value="noEspe">Prefiero no especificar</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Tema de interés</span>
+                  </div>
+                  <select id="interest" class="custom-select" name="interest">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Autoempleo">Autoempleo</option>
+                    <option value="Futuro del empleo">Futuro del empleo</option>
+                    <option value="Softskills & Hardskills">Softskills & Hardskills</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Pasatiempo Favorito</span>
+                  </div>
+                  <select id="hobbie" class="custom-select" name="hobbie">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Baile y danza">Baile y danza</option>
+                    <option value="Deporte">Deporte</option>
+                    <option value="Diseño y Dibujo">Diseño y dibujo</option>
+                    <option value="DIY">DIY</option>
+                    <option value="Juegos de mesa">Juegos de mesa y coleccionables</option>
+                    <option value="Leer">Leer</option>
+                    <option value="Música">Música</option>
+                    <option value="Ocio digital">Ocio digital</option>
+                    <option value="Programación">Programación</option>
+                    <option value="Series o películas">Series o películas</option>
+                    <option value="Teatro">Teatro</option>
+                    <option value="TV">TV</option>
+                    <option value="Viajar">Viajar</option>
+                    <option value="Videojuegos">Videojuegos</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Conferencia o panel favorito del día 1</span>
+                  </div>
+                  <select id="FirstDayConf" class="custom-select" name="FirstDayConf">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Bienvenida Talent Jobs @ Home">10:00 - Bienvenida Talent Jobs @ Home</option>
+                    <option value="Centre for Skills">10:05 - Centre for Skills</option>
+                    <option value="Actualiza tu perfil de linkedIn para conseguir empleo">10:30 - Actualiza tu perfil de linkedIn para conseguir empleo</option>
+                    <option value="Design Thinking ">11:30 - Design Thinking</option>
+                    <option value="El Futuro del Trabajo">12:00- El Futuro del Trabajo</option>
+                    <option value="La transformación social, bajo la perspectiva de la economía solidaria ">13:00 - La transformación social, bajo la perspectiva de la economía solidaria </option>
+                    <option value="¿Crecimiento o sueldo? Ambas.">13:30 - ¿Crecimiento o sueldo? Ambas.</option>
+                    <option value="Portafolio creativo: diseña, conecta y emociona.">14:00 - Portafolio creativo: diseña, conecta y emociona.</option>
+                    <option value="Potenciando la Cultura de Inclusión en 3M Mexico">14:30 - Potenciando la Cultura de Inclusión en 3M Mexico</option>
+                    <option value="Cómo sobrevivir a la empresa en la que trabajas ">15:00 - Cómo sobrevivir a la empresa en la que trabajas </option>
+                    <option value="La contratación desde el punto de vista del empresario">16:00 - La contratación desde el punto de vista del empresario</option>
+                    <option value="Habilidades blandas como parte de la Educación Académica">16:30 - Habilidades blandas como parte de la Educación Académica</option>
+                    <option value="Creciendo en la Industria del Software">17:30 - Creciendo en la Industria del Software</option>
+                    <option value="Mejores prácticas para nuestra imagen profesional">18:00 - Mejores prácticas para nuestra imagen profesional</option>
+                    <option value="Impacta con tu talento">19:00 - Impacta con tu talento</option>
+                    <option value="Bienestar personal para el buen desempeño profesional">19:30 - Bienestar personal para el buen desempeño profesional</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Conferencia o panel favorito del día 2</span>
+                  </div>
+                  <select id="SecDayConf" class="custom-select" name="SecDayConf">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="¿Cómo apoyan las startups en la generación de empleos?">10:00 - ¿Cómo apoyan las startups en la generación de empleos?</option>
+                    <option value="Personal Branding">11:00 - Personal Branding</option>
+                    <option value="Reclutamiento inclusivo">11:30 - Reclutamiento inclusivo</option>
+                    <option value="Atracción de Talento">12:00 - Atracción de Talento</option>
+                    <option value="Simulación de Entrevista para Diseñador Jr.">12:30 - Simulación de Entrevista para Diseñador Jr.</option>
+                    <option value="Jorge León y los famosos, tema de hoy: autoempleo 1">13:00 - Jorge León y los famosos, tema de hoy: autoempleo 1</option>
+                    <option value="Jorge León y los famosos, tema de hoy: autoempleo 2">13:30 - Jorge León y los famosos, tema de hoy: autoempleo 2</option>
+                    <option value="2021 ¿MadMax? ¿Qué habilidades necesitas para enfrentarlo?">14:00 - 2021 ¿MadMax? ¿Qué habilidades necesitas para enfrentarlo?</option>
+                    <option value="Women´s Network">14:30 - Women´s Network</option>
+                    <option value="Como sobresalir en tu entrevista de trabajo virtual">15:00 - Como sobresalir en tu entrevista de trabajo virtual</option>
+                    <option value="Behaviors that speed up your career">15:30 - Behaviors that speed up your career</option>
+                    <option value="Los empleos más importantes en la actualidad y las habilidades necesarias para encontrar el trabajo de tus sueños ">16:00 - Los empleos más importantes en la actualidad y las habilidades necesarias para encontrar el trabajo de tus sueños </option>
+                    <option value="LinkedIn, bots, CRMs y tips para encontrar trabajo de manera exitosa">17:00 - LinkedIn, bots, CRMs y tips para encontrar trabajo de manera exitosa</option>
+                    <option value="De Recursos Inhumanos a Recursos Humanos ">17:30 - De Recursos Inhumanos a Recursos Humanos </option>
+                    <option value="Futuro del empleo / empleos del futuro">18:30 - Futuro del empleo / empleos del futuro</option>
+                    <option value="Buscar, Encontrar y Obtener Trabajo en la Industria Creativa, Desarrollo y Mundo TI.">19:00 - Buscar, Encontrar y Obtener Trabajo en la Industria Creativa, Desarrollo y Mundo TI.</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Edad en años</span>
+                  </div>
+                  <input type="number" min="0" max="150" class="form-control" id="edad" name="edad" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo número)" required>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Estado de procedencia</span>
+                  </div>
+                  <select id="estado" class="custom-select" name="estado">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="AGS">Aguascalientes</option>
+                    <option value="BC">Baja California</option>
+                    <option value="BCS">Baja California Sur</option>
+                    <option value="CMP">Campeche</option>
+                    <option value="CHS">Chiapas</option>
+                    <option value="CHI">Chihuahua</option>
+                    <option value="COA">Coahuila</option>
+                    <option value="COL">Colima</option>
+                    <option value="CDMX">Ciudad de México</option>
+                    <option value="DGO">Durango</option>
+                    <option value="MEX">Estado de México</option>
+                    <option value="GTO">Guanajuato</option>
+                    <option value="GRO">Guerrero</option>
+                    <option value="HGO">Hidalgo</option>
+                    <option value="JAL">Jalisco</option>
+                    <option value="MCH">Michoacán</option>
+                    <option value="MOR">Morelos</option>
+                    <option value="NAY">Nayarit</option>
+                    <option value="NL">Nuevo León</option>
+                    <option value="OAX">Oaxaca</option>
+                    <option value="PUE">Puebla</option>
+                    <option value="QRO">Querétaro</option>
+                    <option value="QR">Quintana Roo</option>
+                    <option value="SLP">San Luis Potosí</option>
+                    <option value="SIN">Sinaloa</option>
+                    <option value="SON">Sonora</option>
+                    <option value="TAB">Tabasco</option>
+                    <option value="TMS">Tamaulipas</option>
+                    <option value="TLX">Tlaxcala</option>
+                    <option value="VER">Veracruz</option>
+                    <option value="YUC">Yucatán</option>
+                    <option value="ZAC">Zacatecas</option>
+                    <option value="OTHER">Extranjero</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Ocupación</span>
+                  </div>
+                  <select id="ocupation" class="custom-select" name="ocupation">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Emplead@">Emplead@</option>
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Emprendedor@">Emprendedor@</option>
+                    <option value="Empresari@">Empresari@</option>
+                    <option value="Ciencias sociales y humanidades">Ciencias sociales y humanidades</option>
+                    <option value="Ciencias exactas e ingenierías">Ciencias exactas e ingenierías</option>
+                    <option value="Ciencias económico administrativas">Ciencias económico administrativas</option>
+                    <option value="Diseño y/o artes">Diseño y/o artes</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Ciencias Agropecuarias">Ciencias Agropecuarias</option>
+                    <option value="Otro">Otro</option>
+
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Universidad</span>
+                  </div>
+                  <input type="text" class="form-control" id="universidad" name="universidad" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="Universidad o escuela">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Empresa</span>
+                  </div>
+                  <input type="text" class="form-control" id="empresa" name="empresa" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="Empresa en la que laboras">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Red social favorita</span>
+                  </div>
+                  <select id="social_media" class="custom-select" name="social_media">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Discord">Discord</option>
+                    <option value="TikTok">TikTok</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Youtube">Youtube</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Facebook o Linkedin</span>
+                  </div>
+                  <input type="text" class="form-control" id="facelink" name="facelink" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="Contacto">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Dispositivo</span>
+                  </div>
+                  <select id="device" class="custom-select" name="device">
+                    <option value="no" selected>Seleccione uno...</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Móvil">Móvil</option>
+                    <option value="Tablet">Tablet</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Temas que te gustaria ver en Talent @Home</span>
+                  </div>
+                  <input type="text" class="form-control" id="topic_interest" name="topic_interest" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default " placeholder="(Sólo letras)">
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="resultado"></span>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="row">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-1">
+                      <form method="post">
+                        <input type="button" id="enviar" name="enviar" class="enviar btn btn-secondary"
+                          value="Enviar" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div id="resultado"></div><br>
+              </section>
+            </fieldset>
+          </form>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#resultado").hide();
+      $("#enviar").click(function (e) {
+        e.preventDefault();
+        var patt = new RegExp("[ A-Za-zñÑäÄëËïÏöÖüÜáéíóúáéíóúÁÉÍÓÚÂÊÎÔÛâêîôûàèìòùÀÈÌÒÙ]");
+        var email = new RegExp("/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/");
+        var flag = [];
+
+        if(!patt.test($("#nombre").val())||$("#nombre").val() === ''){
+          flag.push("Nombre")
+        }
+        if(!patt.test($("#apellido").val())||$("#apellido").val() === ''){
+          flag.push("Apellido")
+        }
+        if(email.test($("#email").val())){
+          flag.push("Email")
+        }
+        if($("#genero").val() === 'no'){
+          flag.push("Género")
+        }
+        if($("#interest").val() === 'no'){
+          flag.push("Interés")
+        }
+        if($("#hobbie").val() === 'no'){
+          flag.push("Pasatiempo")
+        }
+        if($("#FirstDayConf").val() === 'no'){
+          flag.push("Conferencia Favorita día 1")
+        }
+        if($("#SecDayConf").val() === 'no'){
+          flag.push("Conferencia Favorita día 2")
+        }
+        if($("#edad").val() === '0'||$("#edad").val() === ''){
+          flag.push("Edad")
+        }
+        if($("#estado").val() === 'no'){
+          flag.push("Estado de Origen")
+        }
+        if($("#ocupation").val() === 'no'){
+          flag.push("Ocupación")
+        }
+        if(!patt.test($("#universidad").val())&&$("#universidad").val()!==""){
+          flag.push("Universidad")
+        }
+        if(!patt.test($("#empresa").val())&&$("#universidad").val()!==""){
+          flag.push("Empresa")
+        }
+        if($("#social_media").val() === 'no'){
+          flag.push("Rede social favorita")
+        }
+        if($("#device").val() === 'no'){
+          flag.push("Dispositivo")
+        }
+        if(flag.length===0){
+          alert("Gracias por participar.\nTu certificado ya se encuentra en tu carpeta de Descargas.")
+          document.getElementById("formCertificado").submit();
+        }else{
+          let str = "Revisa que los siguientes campos se encuentren completos y que no tengan caracteres especiales.\n";
+          flag.forEach(element=>{
+            str += "-"+element+"\n";
+          })
+          alert(str)
+        }
+      });
+    });
+    
+  </script>
+</body>
+
+</html>

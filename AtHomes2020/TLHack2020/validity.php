@@ -3,9 +3,9 @@
 //ini_set('display_errors', 1);
 
 $servername = "localhost";
-$username = "talentne_certif";
-$password = "Estado81zeus";
-$dbname = "talentne_certif";
+$username = "uhfqd5vcyivsh";
+$password = "mwssmgg8b8qk";
+$dbname = "db1avnxuh4fmmx";
 
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];

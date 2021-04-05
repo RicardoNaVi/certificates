@@ -1,9 +1,9 @@
 <?php
 	$Table = "FashionSpeaker";
 	$servername = "localhost";
-	$username = "talentne_2020ah";
-	$password = "RnNxO=T56!{r";
-	$dbname = "talentne_2020certifathome";
+	$username = "uhfqd5vcyivsh";
+	$password = "mwssmgg8b8qk";
+	$dbname = "db1avnxuh4fmmx";
 
 	ini_set('max_execution_time', 0);
 	mb_internal_encoding('UTF-8');

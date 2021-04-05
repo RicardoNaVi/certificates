@@ -1,9 +1,9 @@
 <?php
 	$Table = "JobsSpeaker";
 	$servername = "localhost";
-	$username = "u6ami1wmycyzi";
-	$password = "RnNxO=T56!{r";
-	$dbname = "dbhrgqwepxha5c";
+	$username = "uhfqd5vcyivsh";
+	$password = "mwssmgg8b8qk";
+	$dbname = "dblazobsushgcp";
 
 	$name = mb_strtoupper($_POST['nombre']);
 	$email = mb_strtolower($_POST['email']);

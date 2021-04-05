@@ -1,9 +1,9 @@
 <?php
 	$Table = "BusinessSpeaker";
 	$servername = "localhost";
-	$username = "u6ami1wmycyzi";
-	$password = "RnNxO=T56!{r";
-	$dbname = "dbhrgqwepxha5c";
+	$username = "uhfqd5vcyivsh";
+	$password = "mwssmgg8b8qk";
+	$dbname = "dblazobsushgcp";
 
 	ini_set('max_execution_time', 0);
 	mb_internal_encoding('UTF-8');

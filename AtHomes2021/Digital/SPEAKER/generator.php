@@ -1,5 +1,5 @@
 <?php
-	$Table = "DigitalSpeaker" ;
+	$Table = "DigitalSpeaker";
 	$servername = "localhost";
 	$username = "uhfqd5vcyivsh";
 	$password = "mwssmgg8b8qk";

@@ -41,7 +41,7 @@
 			$font = imageloadfont($fuente);
 			$fontwidth = 5;
 			$center = (imagesx($im) / 2) - ($fontwidth * (strlen($row["nameP"])/2))*14;
-			imagettftext($im, 80, 0, $center, 1340, $color, $fuente, $row["nameP"]);
+			imagettftext($im, 80, 0, $center, 1370, $color, $fuente, $row["nameP"]);
 			imagepng($im);
 			$code = "0";
 		} catch (Exception $e) {

@@ -28,8 +28,8 @@
 			header ( "Content-Type: application/force-download" );
 			header ( "Content-Type: application/download" );
 			header ( "Content-Type: png" );
-			header ( "Content-Disposition: attachment; filename=Constancia.png" );
-			$im     = imagecreatefrompng("img/Constancia.png");
+			header ( "Content-Disposition: attachment; filename=Certificado.png" );
+			$im     = imagecreatefrompng("img/Certificado.png");
 			$fontwidth = 80;
 			$nameP = RemoveSpecialChar($row["nameP"]);
 			$center = (imagesx($im) / 2) - (($fontwidth-10) * (strlen($nameP)))/2;

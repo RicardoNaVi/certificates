@@ -30,11 +30,11 @@
 			header ( "Content-Type: png" );
 			header ( "Content-Disposition: attachment; filename=Certificado.png" );
 			$im     = imagecreatefrompng("img/Certificado.png");
-			$fontwidth = 80;
+			$fontwidth = 4;
 			$nameP = RemoveSpecialChar($row["nameP"]);
-			$center = (imagesx($im) / 2) - (($fontwidth-10) * (strlen($nameP)))/2;
+			$center = (imagesx($im) / 2) - ($fontwidth * (strlen($row["nameP"])/2))*14;
 			$color = imagecolorallocate($im, 0, 0, 0);
-			imagettftext($im, $fontwidth, 0, $center, 1370, $color, realpath("font/nutmegregular.ttf"),$nameP);
+			imagettftext($im, 80, 0, $center, 1370, $color, realpath("font/camber.ttf"),$nameP);
 			imagepng($im);
 			$code = "0";
 		} catch (Exception $e) { die($e); }	

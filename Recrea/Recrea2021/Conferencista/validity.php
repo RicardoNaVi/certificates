@@ -1,16 +1,16 @@
 <?php
-	$Table = "Digital";
+	$Table = "RecreaConf2021";
 	$servername = "localhost";
-	$username = "uhfqd5vcyivsh";
-	$password = "mwssmgg8b8qk";
-	$dbname = "dblazobsushgcp";
+	$username = "uwdgjqube5wvj";
+	$password = "mw1ucrn81jy0";
+	$dbname = "dbvgisqd7bnkzg";
 
-	$pedido = $_POST['pedido'];
+	$email = mb_strtolower($_POST['email']);
 
 	$code = "0";
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
-	$sql = "SELECT id,email,UPPER(name) as nameP,Downloads FROM $Table WHERE id = '$pedido'";
+	$sql = "SELECT id,Email,UPPER(Nombre_Ponente) as nameP,Downloads FROM $Table WHERE Email = '$email'";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 		global $code;

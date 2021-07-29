@@ -37,7 +37,7 @@
 			$color = imagecolorallocate($im, 0, 0, 0);
 			$px     = (imagesx($im) - 7.5 * strlen($row["nameP"])) / 2;
 			//$fuente = "nutmegregular.ttf";
-			$fuente = realpath('font/nutmegregular.ttf');
+			$fuente = realpath('font/camber.ttf');
 			$font = imageloadfont($fuente);
 			$fontwidth = 5;
 			$center = (imagesx($im) / 2) - ($fontwidth * (strlen($row["nameP"])/2))*14;
